@@ -1,0 +1,60 @@
+package dados;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Monitor {
+	private String cpf;
+	private String senha;
+	private String nome;
+	private Materia materia;
+	private Double score;
+	private List<Avaliacao> avaliacoes = new ArrayList<Avaliacao>();
+	
+	
+	public void adicionarAvaliacao(Avaliacao avaliacao) {
+		avaliacoes.add(avaliacao);
+	}
+	
+	public void adicionarResposta(Resposta resposta) {
+		this.materia.getDiscussoes().add(resposta);
+		
+	}
+	
+	/*Na modelagem colocaram esse método na classe monitor, porém
+	não é possivel adicionar uma resposta pos a classe "Monitor" não
+	conversa com a classe materia, que possui a lista de Discussoes.*/
+	//Os metodos de login e logout devem estar na classe sistema, e não nas classes de dados
+	
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public Materia getMateria() {
+		return materia;
+	}
+	public void setMateria(Materia materia) {
+		this.materia = materia;
+	}
+	public Double getScore() {
+		return score;
+	}
+	public void setScore(Double score) {
+		this.score = score;
+	}
+	
+}

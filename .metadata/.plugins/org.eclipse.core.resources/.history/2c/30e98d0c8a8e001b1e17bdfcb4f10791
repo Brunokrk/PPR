@@ -1,0 +1,9 @@
+package dados;
+
+public class Monitor {
+	private String cpf;
+	private String senha;
+	private String nome;
+	private Materia materia;
+	private Double score;
+}

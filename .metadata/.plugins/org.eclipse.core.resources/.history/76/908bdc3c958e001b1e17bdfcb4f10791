@@ -1,0 +1,16 @@
+package dados;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Materia {
+	private int id;
+	private String nome;
+	private List<Aluno> alunos = new ArrayList<Aluno>();
+	private List<Discussao> discussoes = new ArrayList<Discussao>();
+	private List<Monitor> monitores = new ArrayList<Monitor>();
+	private List<Professor> professores = new ArrayList<Professor>();
+	
+	
+	
+}
