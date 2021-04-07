@@ -60,7 +60,7 @@ public class Main {
 				case 2:
 					//
 				case 3:
-					int id = excluirMateria();
+					String noem = excluirMateria();
 					sistema.excluirMateria(id);
 					printMaterias();
 					break;
@@ -89,8 +89,6 @@ public class Main {
 	
 	private static Materia novaMateria() {
 		Materia materia = new Materia();
-		System.out.println("Informe o id da nova Materia:");
-		materia.setId(Integer.parseInt(s.nextLine()));
 		System.out.println("Informe o nome da nova Materia:");
 		materia.setNome(s.nextLine());
 		return materia;

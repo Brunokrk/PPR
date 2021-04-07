@@ -54,16 +54,11 @@ public class Main {
 				case 1:
 					Materia novaMat = novaMateria();
 					sistema.adicionarMateria(novaMat);
-					
-					printMaterias();
-					break;
+					System.out.println(novaMat.getId()+" : "+ novaMat.getNome()+" INSERIDA");
 				case 2:
 					//
 				case 3:
-					int id = excluirMateria();
-					sistema.excluirMateria(id);
-					printMaterias();
-					break;
+					//
 				case 4:
 					//
 				case 5:
@@ -80,26 +75,13 @@ public class Main {
 		}
 	}
 	
-	private static void printMaterias() {
-		System.out.println("------MATÉRIAS------");
-		for (Materia item : sistema.getMaterias()) {
-			System.out.println(item.toString());
-		}
-	}
-	
 	private static Materia novaMateria() {
 		Materia materia = new Materia();
-		System.out.println("Informe o id da nova Materia:");
+		System.out.println("Informe o id da Materia:");
 		materia.setId(Integer.parseInt(s.nextLine()));
-		System.out.println("Informe o nome da nova Materia:");
+		System.out.println("Informe o nome da Materia:");
 		materia.setNome(s.nextLine());
 		return materia;
-	}
-	
-	private static int excluirMateria() {
-		System.out.println("Informe o id da Materia que deseja exluir:");
-		int id = Integer.parseInt(s.nextLine());
-		return id;
 	}
 	
 }

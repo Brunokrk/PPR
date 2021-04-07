@@ -54,7 +54,7 @@ public class Main {
 				case 1:
 					Materia novaMat = novaMateria();
 					sistema.adicionarMateria(novaMat);
-					
+					System.out.println(novaMat.getId()+" : "+ novaMat.getNome()+" INSERIDA");
 					printMaterias();
 					break;
 				case 2:
@@ -89,9 +89,9 @@ public class Main {
 	
 	private static Materia novaMateria() {
 		Materia materia = new Materia();
-		System.out.println("Informe o id da nova Materia:");
+		System.out.println("Informe o id da Materia:");
 		materia.setId(Integer.parseInt(s.nextLine()));
-		System.out.println("Informe o nome da nova Materia:");
+		System.out.println("Informe o nome da Materia:");
 		materia.setNome(s.nextLine());
 		return materia;
 	}

@@ -21,10 +21,9 @@ public class SistemaMonitoria {
 	}
 	
 	public void excluirMateria(int id) {
-		for(int i=0; i<materias.size(); i++) {
-			Materia m = materias.get(i);
-			if(m.getId() == id) {
-				materias.remove(m);
+		for (Materia item : materias) {
+			if(item.getId() == id) {
+				materias.remove(item);
 			}
 		}
 	}

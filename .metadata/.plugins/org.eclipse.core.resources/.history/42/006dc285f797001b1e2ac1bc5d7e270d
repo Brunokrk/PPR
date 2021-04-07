@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Materia {
-	private String nome;
 	private int id;
+	private String nome;
 	private List<Aluno> alunos = new ArrayList<Aluno>();
 	private List<Discussao> discussoes = new ArrayList<Discussao>();
 	private List<Monitor> monitores = new ArrayList<Monitor>();
@@ -69,16 +69,12 @@ public class Materia {
 		alunos.add(aluno);
 	}
 	
-	
-	
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
 	public String getNome() {
 		return nome;
 	}
@@ -110,9 +106,6 @@ public class Materia {
 		this.professores = professores;
 	}
 	
-	public String toString() {
-		return this.nome;
-	}
 	
 	
 }

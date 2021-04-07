@@ -89,15 +89,13 @@ public class Main {
 	
 	private static Materia novaMateria() {
 		Materia materia = new Materia();
-		System.out.println("Informe o id da nova Materia:");
-		materia.setId(Integer.parseInt(s.nextLine()));
 		System.out.println("Informe o nome da nova Materia:");
 		materia.setNome(s.nextLine());
 		return materia;
 	}
 	
 	private static int excluirMateria() {
-		System.out.println("Informe o id da Materia que deseja exluir:");
+		System.out.println("Informe o nome da Materia que deseja exluir:");
 		int id = Integer.parseInt(s.nextLine());
 		return id;
 	}

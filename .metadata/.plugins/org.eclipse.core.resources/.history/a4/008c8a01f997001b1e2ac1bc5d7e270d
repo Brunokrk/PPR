@@ -20,10 +20,10 @@ public class SistemaMonitoria {
 		this.materias.add(materia);
 	}
 	
-	public void excluirMateria(int id) {
+	public void excluirMateria(String nome) {
 		for(int i=0; i<materias.size(); i++) {
 			Materia m = materias.get(i);
-			if(m.getId() == id) {
+			if(m.getNome().equals(nome)) {
 				materias.remove(m);
 			}
 		}

@@ -60,8 +60,8 @@ public class Main {
 				case 2:
 					//
 				case 3:
-					int id = excluirMateria();
-					sistema.excluirMateria(id);
+					String noem = excluirMateria();
+					sistema.excluirMateria(nome);
 					printMaterias();
 					break;
 				case 4:
@@ -89,17 +89,15 @@ public class Main {
 	
 	private static Materia novaMateria() {
 		Materia materia = new Materia();
-		System.out.println("Informe o id da nova Materia:");
-		materia.setId(Integer.parseInt(s.nextLine()));
 		System.out.println("Informe o nome da nova Materia:");
 		materia.setNome(s.nextLine());
 		return materia;
 	}
 	
-	private static int excluirMateria() {
+	private static String excluirMateria() {
 		System.out.println("Informe o id da Materia que deseja exluir:");
-		int id = Integer.parseInt(s.nextLine());
-		return id;
+		String nome = s.nextLine();
+		return nome;
 	}
 	
 }
