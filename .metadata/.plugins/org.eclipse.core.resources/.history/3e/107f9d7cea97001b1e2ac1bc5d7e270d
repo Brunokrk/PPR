@@ -1,0 +1,43 @@
+package negocio;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import dados.*;
+
+public class SistemaMonitoria {
+	private static SistemaMonitoria instance = null; //singleton
+	private List<Materia> materias = new ArrayList<Materia>();
+	
+	public static SistemaMonitoria getInstance() {
+		if(instance == null) {
+			instance = new SistemaMonitoria();
+		}
+		return instance;
+	}
+	
+	public void adicionarAluno(Materia materia, Aluno aluno) {
+		for (Materia item : materias) {
+			if(item.equals(materia)) {
+				//Se tiver mesmo id -> equals sobrescrito na classe Materia
+				item.adicionarAluno(aluno);
+			}
+		}
+	}
+	
+	/*
+	  criarDiscussao(...)
+	  editarDiscussão(...)
+	  avaliarMonitor(...)
+	  adicionarMateria(...)
+	  excluirMateria(...)
+	  editarMateria(...)
+	  adicionarAluno(...)
+	  adiconarMonitor(...)
+	  adicionarProfessor(...)
+	  adicionarPost(...)
+	  adicionarResposta(...)
+	  */
+	
+	
+}

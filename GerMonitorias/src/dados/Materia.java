@@ -11,6 +11,20 @@ public class Materia {
 	private List<Monitor> monitores = new ArrayList<Monitor>();
 	private List<Professor> professores = new ArrayList<Professor>();
 	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Materia) {
+			Materia aux = (Materia)obj;
+			if(this.id == aux.getId()) {
+				return true;
+			}else {
+				return false;
+			}
+		}else {
+			return false;
+		}
+	}
+	
 	public List<Post> getPosts(){
 		List<Post> posts = new ArrayList<Post>();
 		for(Discussao item : discussoes) {
