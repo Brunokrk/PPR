@@ -6,20 +6,6 @@ public class Aluno {
 	private String cpf;
 	
 	
-	@Override
-	public boolean equals(Object obj) {
-		if(obj instanceof Aluno) {
-			Aluno aux = (Aluno)obj;
-			if(this.cpf == aux.getCpf()) {
-				return true;
-			}else {
-				return false;
-			}
-		}else {
-			return false;
-		}
-	}
-	
 	public String getNome() {
 		return nome;
 	}

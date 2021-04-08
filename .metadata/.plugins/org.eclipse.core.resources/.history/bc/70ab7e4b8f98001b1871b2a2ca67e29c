@@ -81,7 +81,7 @@ public class SistemaMonitoria {
 				if(item.verificaAluno(aluno)!= true) {
 					item.adicionarAluno(aluno);
 				}else {
-					System.out.println("Aluno já está na matéria");
+					System.out.println("Aluno já está na materia");
 				}
 				
 			}
@@ -125,7 +125,7 @@ public class SistemaMonitoria {
 			if(item.getId()== id) {
 				return item;
 			}else {
-				System.out.println("");
+				System.out.println("Matéria Inexistente");
 			}
 		}
 		return null;

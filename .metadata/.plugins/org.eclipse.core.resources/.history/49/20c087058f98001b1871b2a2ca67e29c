@@ -26,15 +26,6 @@ public class Materia {
 		}
 	}
 	
-	public Boolean verificaAluno(Aluno aluno) {
-		for (Aluno al: alunos) {
-			if(al.getCpf() == aluno.getCpf()) {
-				return true;
-			}
-		}
-		return false;
-	}
-	
 	public List<Post> getPosts(){
 		List<Post> posts = new ArrayList<Post>();
 		for(Discussao item : discussoes) {

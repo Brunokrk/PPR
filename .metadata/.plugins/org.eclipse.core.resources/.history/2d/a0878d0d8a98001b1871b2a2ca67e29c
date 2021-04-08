@@ -156,8 +156,6 @@ public class Main {
 			for(Resposta r : materia.getRespostas()) {
 				if(r.getId() == id) {
 					System.out.println("Título: "+r.getTitulo()+"\nResposta: "+ r.getResposta());
-				}else {
-					System.out.println("Não existem respostas para o Post");
 				}
 			}
 			System.out.println("**************************************************");

@@ -78,11 +78,7 @@ public class SistemaMonitoria {
 	public void adicionarAluno(Materia materia, Aluno aluno) {
 		for (Materia item : materias) {
 			if(item.equals(materia)) {					
-				if(item.verificaAluno(aluno)!= true) {
-					item.adicionarAluno(aluno);
-				}else {
-					System.out.println("Aluno já está na matéria");
-				}
+				item.adicionarAluno(aluno);
 				
 			}
 		}
@@ -125,7 +121,7 @@ public class SistemaMonitoria {
 			if(item.getId()== id) {
 				return item;
 			}else {
-				System.out.println("");
+				System.out.println("Matéria Inexistente");
 			}
 		}
 		return null;

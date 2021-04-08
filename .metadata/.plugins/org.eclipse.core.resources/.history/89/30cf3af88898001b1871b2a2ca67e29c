@@ -69,37 +69,28 @@ public class Main {
 				case 5:
 					System.out.println("Informe o id da Materia que deseja cadastrar um Professor");
 					Materia materia_ = sistema.getMateriaById(getIdMateriaEscolhida());
-					if(materia_ != null) {
-						Professor professor = novoProfessor();
-						sistema.adicionarProfessor(materia_, professor);
-						mostrarProfessores();
-					}
+					Professor professor = novoProfessor();
+					sistema.adicionarProfessor(materia_, professor);
+					mostrarProfessores();
 					break;
 				case 6:
 					System.out.println("Informe o id da Materia que deseja cadastrar um Monitor");
 					Materia m = sistema.getMateriaById(getIdMateriaEscolhida());
-					if(m!= null) {
-						Monitor monitor = novoMonitor();
-						sistema.adicionarMonitor(m, monitor);
-						mostrarMonitores();
-					}
+					Monitor monitor = novoMonitor();
+					sistema.adicionarMonitor(m, monitor);
+					mostrarMonitores();
 					break;
 				case 7:
 					System.out.println("Informe o id da Materia que deseja cadastrar um post");
 					Materia M = sistema.getMateriaById(getIdMateriaEscolhida());
-					if(M != null) {
-						Post post = novoPost();
-						sistema.adicionarPost(M, post);	
-					}
+					Post post = novoPost();
+					sistema.adicionarPost(M, post);
 					break;
 				case 8:
 					System.out.println("Informe o id da Materia que deseja cadastrar uma resposta");
 					Materia Mat = sistema.getMateriaById(getIdMateriaEscolhida());
-					if(Mat != null) {
-						Resposta resposta = novaResposta();
-						sistema.adicionarResposta(Mat, resposta);
-					}
-						
+					Resposta resposta = novaResposta();
+					sistema.adicionarResposta(Mat, resposta);
 					break;
 				case 9:
 					System.out.println("Informe o id da Materia que deseja ver uma discussão:");
@@ -141,28 +132,21 @@ public class Main {
 	
 	private static void mostraDiscById(int idMateria) {
 		Materia materia = sistema.getMateriaById(idMateria);
-		if( materia != null) {
-			System.out.println("Informe o id da discussão:");
-			int id = Integer.parseInt(s.nextLine());
-			System.out.println("**************************************************");
-			for(Post p : materia.getPosts()) {
-				if(p.getId() == id) {
-					System.out.println("Conteúdo: "+p.getConteudo()+"\nPergunta: "+ p.getPergunta());
-				}else {
-					System.out.println("Não existe post com este Id");
-				}
+		System.out.println("Informe o id da discussão:");
+		int id = Integer.parseInt(s.nextLine());
+		System.out.println("**************************************************");
+		for(Post p : materia.getPosts()) {
+			if(p.getId() == id) {
+				System.out.println("Conteúdo: "+p.getConteudo()+"\nPergunta: "+ p.getPergunta());
 			}
-			System.out.println("-----RESPOSTAS:");
-			for(Resposta r : materia.getRespostas()) {
-				if(r.getId() == id) {
-					System.out.println("Título: "+r.getTitulo()+"\nResposta: "+ r.getResposta());
-				}else {
-					System.out.println("Não existem respostas para o Post");
-				}
-			}
-			System.out.println("**************************************************");
 		}
-		
+		System.out.println("-----RESPOSTAS:");
+		for(Resposta r : materia.getRespostas()) {
+			if(r.getId() == id) {
+				System.out.println("Título: "+r.getTitulo()+"\nResposta: "+ r.getResposta());
+			}
+		}
+		System.out.println("**************************************************");
 	}
 	
 	private static Resposta novaResposta() {
@@ -213,6 +197,7 @@ public class Main {
 	}
 	
 	private static int getIdMateriaEscolhida() {
+		//System.out.println("Informe o id da Materia que deseja cadastrar o usuário");
 		int aux = Integer.parseInt(s.nextLine());
 		return aux;
 	}

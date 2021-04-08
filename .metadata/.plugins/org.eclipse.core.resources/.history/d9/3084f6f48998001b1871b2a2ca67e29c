@@ -148,16 +148,12 @@ public class Main {
 			for(Post p : materia.getPosts()) {
 				if(p.getId() == id) {
 					System.out.println("Conteúdo: "+p.getConteudo()+"\nPergunta: "+ p.getPergunta());
-				}else {
-					System.out.println("Não existe post com este Id");
 				}
 			}
 			System.out.println("-----RESPOSTAS:");
 			for(Resposta r : materia.getRespostas()) {
 				if(r.getId() == id) {
 					System.out.println("Título: "+r.getTitulo()+"\nResposta: "+ r.getResposta());
-				}else {
-					System.out.println("Não existem respostas para o Post");
 				}
 			}
 			System.out.println("**************************************************");

@@ -37,22 +37,9 @@ public class SistemaMonitoria {
 		}
 	}
 	
-	public void adicionarMateria(Materia materia) {
-		if (verificaMateria(materia)) {
-			System.out.println("Matéria já existe");
-		}else {
-			this.materias.add(materia);			
-		}
-	}
 	
-	public Boolean verificaMateria(Materia materia) {
-		for(Materia mat : materias) {
-			if (mat.equals(materia)) {
-				//materia já existe
-				return true;
-			}
-		}
-		return false;
+	public void adicionarMateria(Materia materia) {
+		this.materias.add(materia);
 	}
 	
 	public void excluirMateria(int id) {
@@ -77,13 +64,9 @@ public class SistemaMonitoria {
 	
 	public void adicionarAluno(Materia materia, Aluno aluno) {
 		for (Materia item : materias) {
-			if(item.equals(materia)) {					
-				if(item.verificaAluno(aluno)!= true) {
-					item.adicionarAluno(aluno);
-				}else {
-					System.out.println("Aluno já está na matéria");
-				}
-				
+			if(item.equals(materia)) {
+				//Se tiver mesmo id -> equals sobrescrito na classe Materia
+				item.adicionarAluno(aluno);
 			}
 		}
 	}
@@ -125,7 +108,7 @@ public class SistemaMonitoria {
 			if(item.getId()== id) {
 				return item;
 			}else {
-				System.out.println("");
+				System.out.println("Matéria Inexistente");
 			}
 		}
 		return null;

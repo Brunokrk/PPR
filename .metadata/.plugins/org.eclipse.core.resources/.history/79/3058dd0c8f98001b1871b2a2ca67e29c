@@ -30,9 +30,10 @@ public class Materia {
 		for (Aluno al: alunos) {
 			if(al.getCpf() == aluno.getCpf()) {
 				return true;
+			}else {
+				return false;
 			}
 		}
-		return false;
 	}
 	
 	public List<Post> getPosts(){

@@ -77,15 +77,27 @@ public class SistemaMonitoria {
 	
 	public void adicionarAluno(Materia materia, Aluno aluno) {
 		for (Materia item : materias) {
-			if(item.equals(materia)) {					
-				if(item.verificaAluno(aluno)!= true) {
+			if(item.equals(materia)) {
+				if(verificaAluno(materia, aluno)) {
+					System.out.println("Aluno já cadastrado");
+				}else {					
 					item.adicionarAluno(aluno);
-				}else {
-					System.out.println("Aluno já está na matéria");
 				}
-				
 			}
 		}
+	}
+	
+	public Boolean verificaAluno(Materia materia, Aluno aluno) {
+		for (Materia item : materias) {
+			if(item.equals(materia)) {
+				for(Aluno al : item.getAlunos()) {
+					if(al.equals(aluno)) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
 	}
 	
 	public void adicionarMonitor(Materia materia, Monitor monitor) {
@@ -125,7 +137,7 @@ public class SistemaMonitoria {
 			if(item.getId()== id) {
 				return item;
 			}else {
-				System.out.println("");
+				System.out.println("Matéria Inexistente");
 			}
 		}
 		return null;
