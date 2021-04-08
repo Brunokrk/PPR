@@ -75,12 +75,6 @@ public class Main {
 					printMaterias();
 					break;
 				case 4:
-					System.out.println("Informe o id da Materia que deseja cadastrar um aluno");
-					int ident = Integer.parseInt(s.nextLine());
-					Materia materia = sistema.getMateriaById(ident);
-					Aluno novoAluno = novoAluno();
-					sistema.adicionarAluno(materia, novoAluno);
-					
 					break;
 				case 5:
 					break;
@@ -96,15 +90,7 @@ public class Main {
 		}
 	}
 	
-	private static Aluno novoAluno() {
-		Aluno aluno = new Aluno();
-		System.out.println("Informe o nome do novo aluno:");
-		aluno.setNome(s.nextLine());
-		System.out.println("Informe o cpf do novo aluno:");
-		aluno.setCpf(s.nextLine());
-		return aluno;
-	
-	}
+	private static void 
 	
 	private static void printMaterias() {
 		System.out.println("------MATÉRIAS------");

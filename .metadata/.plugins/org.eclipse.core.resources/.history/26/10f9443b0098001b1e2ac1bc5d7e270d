@@ -76,10 +76,8 @@ public class Main {
 					break;
 				case 4:
 					System.out.println("Informe o id da Materia que deseja cadastrar um aluno");
-					int ident = Integer.parseInt(s.nextLine());
-					Materia materia = sistema.getMateriaById(ident);
+					int id = Integer.parseInt(s.nextLine());
 					Aluno novoAluno = novoAluno();
-					sistema.adicionarAluno(materia, novoAluno);
 					
 					break;
 				case 5:
