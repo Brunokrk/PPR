@@ -29,6 +29,7 @@ public class Main {
 		System.out.println("9 - Mostrar Discussão");
 		System.out.println("10 - Avaliar Monitor");
 		//...
+		
 	}
 	private static void menu() {
 		int opcao = -1;

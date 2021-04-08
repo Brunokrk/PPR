@@ -5,4 +5,5 @@
     <fullyQualifiedTypeName name="dados.Materia"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="negocio.SistemaMonitoria"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
