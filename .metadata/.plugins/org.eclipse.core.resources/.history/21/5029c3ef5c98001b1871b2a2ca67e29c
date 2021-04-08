@@ -121,12 +121,11 @@ public class Main {
 			}
 		}
 		System.out.println("-----RESPOSTAS:");
-		for(Resposta r : materia.getRespostas()) {
+		for(Resposta r : materia.getRespostas()()) {
 			if(r.getId() == id) {
-				System.out.println("Título: "+r.getTitulo()+"\nResposta: "+ r.getResposta());
+				System.out.println("Título: "+r.getTitulo()()+"\nResposta: "+ r.getPergunta());
 			}
 		}
-		System.out.println("**************************************************");
 	}
 	
 	private static Resposta novaResposta() {

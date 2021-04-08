@@ -95,14 +95,13 @@ public class Main {
 				case 7:
 					System.out.println("Informe o id da Materia que deseja cadastrar um post");
 					Materia M = sistema.getMateriaById(getIdMateriaEscolhida());
-					Post post = novoPost();
-					sistema.adicionarPost(M, post);
+					Post post = new Post();
+					
 					break;
 				case 8:
 					System.out.println("Informe o id da Materia que deseja cadastrar uma resposta");
 					Materia Mat = sistema.getMateriaById(getIdMateriaEscolhida());
-					Resposta resposta = novaResposta();
-					sistema.adicionarResposta(Mat, resposta);
+					Post post = new Post();
 					break;
 				default:
 					System.out.println("Opção Inválida");
@@ -110,41 +109,9 @@ public class Main {
 		}
 	}
 	
-	private static void mostraDiscById(int idMateria) {
-		Materia materia = sistema.getMateriaById(idMateria);
-		System.out.println("Informe o id da discussão:");
-		int id = Integer.parseInt(s.nextLine());
-		System.out.println("**************************************************");
-		for(Post p : materia.getPosts()) {
-			if(p.getId() == id) {
-				System.out.println("Conteúdo: "+p.getConteudo()+"\nPergunta: "+ p.getPergunta());
-			}
-		}
-		System.out.println("-----RESPOSTAS:");
-		for(Resposta r : materia.getRespostas()) {
-			if(r.getId() == id) {
-				System.out.println("Título: "+r.getTitulo()+"\nResposta: "+ r.getResposta());
-			}
-		}
-		System.out.println("**************************************************");
-	}
-	
-	private static Resposta novaResposta() {
-		Resposta resposta = new Resposta();
-		System.out.println("Informe o ID do Post que deseja responder");
-		resposta.setId(Integer.parseInt(s.nextLine()));
-		System.out.println("Informe o Título da sua resposta");
-		resposta.setTitulo(s.nextLine());
-		System.out.println("Inforeme o Conteudo da sua resposta");
-		resposta.setConteudo(s.nextLine());
-		System.out.println("Informe a resposta");
-		resposta.setResposta(s.nextLine());
-		return resposta;
-	}
-	
 	private static Post novoPost() {
 		Post post = new Post();
-		System.out.println("Informe o ID do novo Post:");
+		System.out.println("Informe o ID do novoPost:");
 		post.setId(Integer.parseInt(s.nextLine()));
 		System.out.println("Informe o título do post");
 		post.setTitulo(s.nextLine());

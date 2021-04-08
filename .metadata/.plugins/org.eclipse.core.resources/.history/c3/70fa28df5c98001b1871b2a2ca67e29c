@@ -110,23 +110,8 @@ public class Main {
 		}
 	}
 	
-	private static void mostraDiscById(int idMateria) {
-		Materia materia = sistema.getMateriaById(idMateria);
-		System.out.println("Informe o id da discussão:");
-		int id = Integer.parseInt(s.nextLine());
-		System.out.println("**************************************************");
-		for(Post p : materia.getPosts()) {
-			if(p.getId() == id) {
-				System.out.println("Conteúdo: "+p.getConteudo()+"\nPergunta: "+ p.getPergunta());
-			}
-		}
-		System.out.println("-----RESPOSTAS:");
-		for(Resposta r : materia.getRespostas()) {
-			if(r.getId() == id) {
-				System.out.println("Título: "+r.getTitulo()+"\nResposta: "+ r.getResposta());
-			}
-		}
-		System.out.println("**************************************************");
+	private static void mostraDiscById() {
+		
 	}
 	
 	private static Resposta novaResposta() {
