@@ -80,7 +80,7 @@ public class Main {
 					Materia materia = sistema.getMateriaById(ident);
 					Aluno novoAluno = novoAluno();
 					sistema.adicionarAluno(materia, novoAluno);
-					mostrarAlunos();
+					
 					break;
 				case 5:
 					break;
@@ -93,18 +93,6 @@ public class Main {
 				default:
 					System.out.println("Opção Inválida");
 			}
-		}
-	}
-	
-	private static void mostrarAlunos() {
-		for(Materia item : sistema.getMaterias()) {
-			System.out.println(item.toString());
-			System.out.println("---Alunos---");
-			for(Aluno alu : item.getAlunos()) {
-				System.out.println(alu.toString());
-				
-			}
-				
 		}
 	}
 	

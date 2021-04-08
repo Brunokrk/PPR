@@ -80,7 +80,7 @@ public class Main {
 					Materia materia = sistema.getMateriaById(ident);
 					Aluno novoAluno = novoAluno();
 					sistema.adicionarAluno(materia, novoAluno);
-					mostrarAlunos();
+					
 					break;
 				case 5:
 					break;

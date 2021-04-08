@@ -25,7 +25,4 @@ public class Aluno {
 		this.cpf = cpf;
 	}
 	
-	public String toString() {
-		return this.nome + ": "+this.cpf;
-	}
 }
