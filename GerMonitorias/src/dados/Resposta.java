@@ -1,3 +1,4 @@
+//Alisson Schmitt, Bruno Marchi Pires, Vinícius Kreutz
 package dados;
 
 public class Resposta extends Discussao{

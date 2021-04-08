@@ -1,0 +1,137 @@
+//Alisson Schmitt, Bruno Marchi Pires, Vinícius Kreutz
+package negocio;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import dados.*;
+
+public class SistemaMonitoria {
+	private static SistemaMonitoria instance = null; //singleton
+	private List<Materia> materias = new ArrayList<Materia>();
+	
+	public static SistemaMonitoria getInstance() {
+		if(instance == null) {
+			instance = new SistemaMonitoria();
+		}
+		return instance;
+	}
+	
+	
+	public void avaliarMonitor(Materia materia, Monitor monitor, Avaliacao avaliacao){
+		for (Materia mat : materias) {
+			if(mat.getId() == materia.getId()) {
+				for(Monitor moni: mat.getMonitores()) {
+					if (moni.getCpf() == monitor.getCpf()) {
+						monitor.adicionarAvaliacao(avaliacao);
+						monitor.setScore();
+						System.out.println("Score médio do monitor:"+ monitor.getScore());
+					}else {
+						System.out.println("Monitor inexistente");
+					}
+				}	
+			}else {
+				System.out.println("Materia inexistente");
+			}
+			
+		}
+	}
+	
+	
+	public void adicionarMateria(Materia materia) {
+		this.materias.add(materia);
+	}
+	
+	public void excluirMateria(int id) {
+		for(int i=0; i<materias.size(); i++) {
+			Materia m = materias.get(i);
+			if(m.getId() == id) {
+				materias.remove(m);
+			}
+		}
+	}
+	
+	public void editarMateria(Materia materia) {
+		for (Materia item : materias) {
+			if(item.getId() == materia.getId()) {
+				System.out.println("Entrou aqui");
+				item.setNome(materia.getNome());
+			}
+		}
+	}
+	
+	public void adicionarAluno(Materia materia, Aluno aluno) {
+		for (Materia item : materias) {
+			if(item.equals(materia)) {
+				//Se tiver mesmo id -> equals sobrescrito na classe Materia
+				item.adicionarAluno(aluno);
+			}
+		}
+	}
+	
+	public void adicionarMonitor(Materia materia, Monitor monitor) {
+		for (Materia item : materias) {
+			if(item.equals(materia)) {
+				item.adicionarMonitor(monitor);
+			}
+		}
+	}
+	
+	public void adicionarProfessor(Materia materia, Professor professor) {
+		for (Materia item : materias) {
+			if(item.equals(materia)) {
+				item.adicionarProfessor(professor);
+			}
+		}
+	}
+	
+	public void adicionarResposta(Materia materia, Resposta resposta) {
+		for (Materia item : materias) {
+			if(item.equals(materia)) {
+				item.adicionarResposta(resposta);
+			}
+		}
+	}
+	
+	public void adicionarPost(Materia materia, Post post) {
+		for (Materia item : materias) {
+			if(item.equals(materia)) {
+				item.adicionarPost(post);
+			}
+		}
+	}
+
+	public Materia getMateriaById(int id) {
+		for(Materia item : materias) {
+			if(item.getId()== id) {
+				return item;
+			}
+		}
+		return null;
+	}
+	
+	public List<Materia> getMaterias() {
+		return materias;
+	}
+
+	public void setMaterias(List<Materia> materias) {
+		this.materias = materias;
+	}
+	
+	
+	/*
+	  criarDiscussao(...) * -> Deveria estar Modelado nesta classe
+	  editarDiscussão(...) * ->Deveria estar Modelado nesta classe
+	  avaliarMonitor(...) * -> Os parametros modelados não são suficientes
+	  adicionarMateria(...) OK
+	  excluirMateria(...) OK
+	  editarMateria(...) OK
+	  adicionarAluno(...) OK
+	  adiconarMonitor(...) OK
+	  adicionarProfessor(...) OK
+	  adicionarPost(...) OK
+	  adicionarResposta(...) OK
+	  */
+	
+	
+}

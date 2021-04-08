@@ -15,20 +15,6 @@ public class Main {
 
 	}
 	
-	/*
-	  criarDiscussao(...)
-	  editarDiscussão(...)
-	  avaliarMonitor(...)
-	  adicionarMateria(...) OK
-	  excluirMateria(...) OK
-	  editarMateria(...) OK
-	  adicionarAluno(...) OK
-	  adiconarMonitor(...) OK
-	  adicionarProfessor(...) OK
-	  adicionarPost(...) OK
-	  adicionarResposta(...) OK
-	  */
-	
 	private static void imprimeMenuGeral() {
 		System.out.println("Escolha uma Operação");
 		System.out.println("0 - Fechar");
@@ -112,9 +98,7 @@ public class Main {
 					mostraDiscById(idselec);
 					break;
 				case 10:
-					
-					
-					
+					avaliaMonitor();
 					break;
 				default:
 					System.out.println("Opção Inválida");
@@ -132,6 +116,14 @@ public class Main {
 		Monitor monitor = materia.getMonitorByNome(nome);
 		if(monitor != null) {
 			//realiza avaliação
+			Avaliacao avaliacao = new Avaliacao();
+			System.out.println("Informe o id da avaliacao:");
+			avaliacao.setId(Integer.parseInt(s.nextLine()));
+			System.out.println("Justificativa da avaliação:");
+			avaliacao.setDescricao(s.nextLine());
+			System.out.println("Informe a nota:");
+			avaliacao.setRanking(Double.parseDouble(s.nextLine()));
+			sistema.avaliarMonitor(materia, monitor, avaliacao);
 		}else {
 			System.out.println("Monitor Informado não existe");
 		}

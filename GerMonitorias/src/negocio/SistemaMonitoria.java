@@ -1,3 +1,4 @@
+//Alisson Schmitt, Bruno Marchi Pires, Vinícius Kreutz
 package negocio;
 
 import java.util.ArrayList;
@@ -16,6 +17,27 @@ public class SistemaMonitoria {
 		return instance;
 	}
 	
+	
+	public void avaliarMonitor(Materia materia, Monitor monitor, Avaliacao avaliacao){
+		for (Materia mat : materias) {
+			if(mat.getId() == materia.getId()) {
+				for(Monitor moni: mat.getMonitores()) {
+					if (moni.getCpf() == monitor.getCpf()) {
+						monitor.adicionarAvaliacao(avaliacao);
+						monitor.setScore();
+						System.out.println("Score médio do monitor:"+ monitor.getScore());
+					}else {
+						System.out.println("Monitor inexistente");
+					}
+				}	
+			}else {
+				System.out.println("Materia inexistente");
+			}
+			
+		}
+	}
+	
+	
 	public void adicionarMateria(Materia materia) {
 		this.materias.add(materia);
 	}
@@ -25,6 +47,8 @@ public class SistemaMonitoria {
 			Materia m = materias.get(i);
 			if(m.getId() == id) {
 				materias.remove(m);
+			}else {
+				System.out.println("Matéria Inexistente");
 			}
 		}
 	}
@@ -95,8 +119,6 @@ public class SistemaMonitoria {
 	public void setMaterias(List<Materia> materias) {
 		this.materias = materias;
 	}
-	
-	
 	
 	
 	/*

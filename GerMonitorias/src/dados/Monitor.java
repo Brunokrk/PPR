@@ -1,3 +1,4 @@
+//Alisson Schmitt, Bruno Marchi Pires, Vinícius Kreutz
 package dados;
 
 import java.util.ArrayList;
@@ -7,8 +8,10 @@ public class Monitor {
 	private String cpf;
 	private String senha;
 	private String nome;
-	private Double score;
+	private Double score=0.0;
 	private List<Avaliacao> avaliacoes = new ArrayList<Avaliacao>();
+	
+	
 	
 	public void adicionarAvaliacao(Avaliacao avaliacao) {
 		avaliacoes.add(avaliacao);
