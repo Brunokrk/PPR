@@ -43,8 +43,4 @@ public class Monitor {
 		this.score = this.score / this.avaliacoes.size();
 	}
 	
-	public String toString() {
-		return this.nome +": "+ this.cpf;
-	}
-	
 }

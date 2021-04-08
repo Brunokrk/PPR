@@ -102,16 +102,8 @@ public class Main {
 		}
 	}
 	
-	private static void mostrarMonitores() {
-		for(Materia item : sistema.getMaterias()) {
-			System.out.println(item.toString());
-			System.out.println("---Monitores---");
-			for(Monitor monitor : item.getMonitores()) {
-				System.out.println(monitor.toString());
-				
-			}
-				
-		}
+	private static void mostraMonitores() {
+		
 	}
 	
 	private static Monitor novoMonitor() {
@@ -120,7 +112,7 @@ public class Main {
 		monitor.setNome(s.nextLine());
 		System.out.println("Informe o cpf do novo Monitor");
 		monitor.setCpf(s.nextLine());
-		return monitor;
+		return monitor
 	}
 	
 	private static int getIdMateriaEscolhida() {

@@ -44,7 +44,7 @@ public class Monitor {
 	}
 	
 	public String toString() {
-		return this.nome +": "+ this.cpf;
+		return
 	}
 	
 }
