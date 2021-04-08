@@ -131,7 +131,7 @@ public class Main {
 		String nome = s.nextLine();
 		Monitor monitor = materia.getMonitorByNome(nome);
 		if(monitor != null) {
-			//realiza avaliação
+			
 		}else {
 			System.out.println("Monitor Informado não existe");
 		}

@@ -126,15 +126,8 @@ public class Main {
 		System.out.println("Informe o id da Materia em que o monitor trabalha");
 		int idmat = Integer.parseInt(s.nextLine());
 		Materia materia = sistema.getMateriaById(idmat);
-		
 		System.out.println("Informe o nome do Monitor:");
 		String nome = s.nextLine();
-		Monitor monitor = materia.getMonitorByNome(nome);
-		if(monitor != null) {
-			//realiza avaliação
-		}else {
-			System.out.println("Monitor Informado não existe");
-		}
 		
 	}
 	

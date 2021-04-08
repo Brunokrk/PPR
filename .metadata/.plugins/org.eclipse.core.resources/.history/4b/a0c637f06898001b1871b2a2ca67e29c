@@ -70,15 +70,6 @@ public class Materia {
 	}
 	
 	
-	public Monitor getMonitorByNome(String nome) {
-		for(Monitor monitor : monitores) {
-			
-			if(monitor.getNome().equals(nome)) {
-				return monitor;
-			}
-		}
-		return null;
-	}
 	
 	public int getId() {
 		return id;

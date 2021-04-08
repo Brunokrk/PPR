@@ -111,31 +111,10 @@ public class Main {
 					int idselec = Integer.parseInt(s.nextLine());
 					mostraDiscById(idselec);
 					break;
-				case 10:
-					
-					
-					
-					break;
 				default:
 					System.out.println("Opção Inválida");
 			}
 		}
-	}
-	
-	private static void avaliaMonitor() {
-		System.out.println("Informe o id da Materia em que o monitor trabalha");
-		int idmat = Integer.parseInt(s.nextLine());
-		Materia materia = sistema.getMateriaById(idmat);
-		
-		System.out.println("Informe o nome do Monitor:");
-		String nome = s.nextLine();
-		Monitor monitor = materia.getMonitorByNome(nome);
-		if(monitor != null) {
-			//realiza avaliação
-		}else {
-			System.out.println("Monitor Informado não existe");
-		}
-		
 	}
 	
 	private static void mostraDiscById(int idMateria) {

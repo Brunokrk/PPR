@@ -102,7 +102,7 @@ public class SistemaMonitoria {
 	/*
 	  criarDiscussao(...) * -> Deveria estar Modelado nesta classe
 	  editarDiscussão(...) * ->Deveria estar Modelado nesta classe
-	  avaliarMonitor(...) * -> Os parametros modelados não são suficientes
+	  avaliarMonitor(...)
 	  adicionarMateria(...) OK
 	  excluirMateria(...) OK
 	  editarMateria(...) OK
