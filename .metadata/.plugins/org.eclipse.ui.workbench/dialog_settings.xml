@@ -24,8 +24,8 @@
 			<item value="2"/>
 		</list>
 		<list key="textArray">
-			<item value="gga"/>
 			<item value="gg"/>
+			<item value="gga"/>
 			<item value="tos"/>
 			<item value="to"/>
 		</list>
