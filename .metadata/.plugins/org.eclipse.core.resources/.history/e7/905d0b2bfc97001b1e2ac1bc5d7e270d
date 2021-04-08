@@ -52,29 +52,19 @@ public class Main {
 				case 0:
 					break;
 				case 1:
-					//ok
 					Materia novaMat = novaMateria();
 					sistema.adicionarMateria(novaMat);
 					printMaterias();
 					break;
 				case 2:
-					//ok
-					Materia nova = editarMateria();
-					if(nova!=null) {
-						sistema.editarMateria(nova);
-						printMaterias();
-					}else {
-						System.out.println("Matéria que deseja editar não existe");
-					}
-					break;
+					
 				case 3:
-					//ok
 					int id = excluirMateria();
 					sistema.excluirMateria(id);
 					printMaterias();
 					break;
 				case 4:
-					
+					//
 				case 5:
 					//
 				case 6:

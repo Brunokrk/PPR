@@ -33,7 +33,7 @@ public class SistemaMonitoria {
 		for (Materia item : materias) {
 			if(item.getId() == materia.getId()) {
 				System.out.println("Entrou aqui");
-				item.setNome(materia.getNome());
+				item = materia;
 			}
 		}
 	}

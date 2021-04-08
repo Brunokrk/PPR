@@ -52,13 +52,11 @@ public class Main {
 				case 0:
 					break;
 				case 1:
-					//ok
 					Materia novaMat = novaMateria();
 					sistema.adicionarMateria(novaMat);
 					printMaterias();
 					break;
 				case 2:
-					//ok
 					Materia nova = editarMateria();
 					if(nova!=null) {
 						sistema.editarMateria(nova);
@@ -68,7 +66,6 @@ public class Main {
 					}
 					break;
 				case 3:
-					//ok
 					int id = excluirMateria();
 					sistema.excluirMateria(id);
 					printMaterias();
