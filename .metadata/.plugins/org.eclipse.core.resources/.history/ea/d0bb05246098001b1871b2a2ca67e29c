@@ -108,7 +108,7 @@ public class Main {
 					System.out.println("Informe o id da Materia que deseja ver uma discussão:");
 					int idselec = Integer.parseInt(s.nextLine());
 					mostraDiscById(idselec);
-					break;
+					
 				default:
 					System.out.println("Opção Inválida");
 			}
