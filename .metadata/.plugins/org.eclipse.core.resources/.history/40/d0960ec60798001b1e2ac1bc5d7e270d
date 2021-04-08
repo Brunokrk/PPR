@@ -87,10 +87,8 @@ public class Main {
 					mostrarProfessores();
 					break;
 				case 6:
-					Materia m = sistema.getMateriaById(getIdMateriaEscolhida());
-					Monitor monitor = novoMonitor();
-					sistema.adicionarMonitor(m, monitor);
-					mostrarMonitores();
+					System.out.println("Informe o id da Materia que deseja cadastrar um monitor");
+					int id_aux = Integer.parseInt
 					break;
 				case 7:
 					break;

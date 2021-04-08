@@ -32,7 +32,7 @@ public class Professor {
 
 	@Override
 	public String toString() {
-		return  this.nome + ": "+ this.cpf;
+		return "Professor [nome=" + nome + "]";
 	}
 	
 	

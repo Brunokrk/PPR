@@ -75,22 +75,17 @@ public class Main {
 					printMaterias();
 					break;
 				case 4:
-					Materia materia = sistema.getMateriaById(getIdMateriaEscolhida());
+					System.out.println("Informe o id da Materia que deseja cadastrar um aluno");
+					int ident = Integer.parseInt(s.nextLine());
+					Materia materia = sistema.getMateriaById(ident);
 					Aluno novoAluno = novoAluno();
 					sistema.adicionarAluno(materia, novoAluno);
 					mostrarAlunos();
 					break;
 				case 5:
-					Materia materia_ = sistema.getMateriaById(getIdMateriaEscolhida());
-					Professor professor = novoProfessor();
-					sistema.adicionarProfessor(materia_, professor);
-					mostrarProfessores();
+					System.out.println("Informe o id da Materia que deseja cadastrar um professor");
 					break;
 				case 6:
-					Materia m = sistema.getMateriaById(getIdMateriaEscolhida());
-					Monitor monitor = novoMonitor();
-					sistema.adicionarMonitor(m, monitor);
-					mostrarMonitores();
 					break;
 				case 7:
 					break;
@@ -102,30 +97,16 @@ public class Main {
 		}
 	}
 	
-	private static int getIdMateriaEscolhida() {
-		System.out.println("Informe o id da Materia que deseja cadastrar o usuário");
-		int aux = Integer.parseInt(s.nextLine());
-		return aux;
-	}
-	
 	private static void mostrarProfessores() {
 		for(Materia item : sistema.getMaterias()) {
 			System.out.println(item.toString());
 			System.out.println("---Professores---");
-			for(Professor prof : item.getProfessores()) {
-				System.out.println(prof.toString());
+			for(Professor prof : item.getAlunos()) {
+				System.out.println(alu.toString());
 				
 			}
 				
 		}
-	}
-	private static Professor novoProfessor() {
-		Professor professor = new Professor();
-		System.out.println("Informe o nome do novo Professor:");
-		professor.setNome(s.nextLine());
-		System.out.println("Informe o cpf do novo Professor");
-		professor.setCpf(s.nextLine());
-		return professor;
 	}
 	
 	private static void mostrarAlunos() {

@@ -75,22 +75,22 @@ public class Main {
 					printMaterias();
 					break;
 				case 4:
-					Materia materia = sistema.getMateriaById(getIdMateriaEscolhida());
+					System.out.println("Informe o id da Materia que deseja cadastrar um aluno");
+					int ident = Integer.parseInt(s.nextLine());
+					Materia materia = sistema.getMateriaById(ident);
 					Aluno novoAluno = novoAluno();
 					sistema.adicionarAluno(materia, novoAluno);
 					mostrarAlunos();
 					break;
 				case 5:
-					Materia materia_ = sistema.getMateriaById(getIdMateriaEscolhida());
+					Materia materia_ = sistema.getMateriaById(aux);
 					Professor professor = novoProfessor();
 					sistema.adicionarProfessor(materia_, professor);
 					mostrarProfessores();
 					break;
 				case 6:
-					Materia m = sistema.getMateriaById(getIdMateriaEscolhida());
-					Monitor monitor = novoMonitor();
-					sistema.adicionarMonitor(m, monitor);
-					mostrarMonitores();
+					System.out.println("Informe o id da Materia que deseja cadastrar um monitor");
+					int id_aux = Integer.parseInt
 					break;
 				case 7:
 					break;
