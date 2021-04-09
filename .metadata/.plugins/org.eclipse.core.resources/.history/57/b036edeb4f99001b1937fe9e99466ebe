@@ -12,6 +12,7 @@ public class Monitor {
 	private List<Avaliacao> avaliacoes = new ArrayList<Avaliacao>();
 	
 	
+	
 	public void adicionarAvaliacao(Avaliacao avaliacao) {
 		avaliacoes.add(avaliacao);
 	}

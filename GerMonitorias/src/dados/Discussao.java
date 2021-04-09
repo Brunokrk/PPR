@@ -6,7 +6,6 @@ public class Discussao {
 	private int id; //não especificaram tipo, botei int
 	
 	
-	
 	public int getId() {
 		return id;
 	}
