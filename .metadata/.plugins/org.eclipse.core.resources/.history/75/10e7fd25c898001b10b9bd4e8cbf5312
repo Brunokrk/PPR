@@ -40,7 +40,6 @@ public class Monitor {
 		return score;
 	}
 	public void setScore() {
-		this.score = 0.0;
 		for (Avaliacao av : avaliacoes) {
 			this.score = this.score + av.getRanking();
 		}

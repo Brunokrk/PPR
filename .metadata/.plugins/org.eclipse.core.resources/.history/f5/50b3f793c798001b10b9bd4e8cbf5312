@@ -23,9 +23,9 @@ public class SistemaMonitoria {
 			if(mat.getId() == materia.getId()) {
 				for(Monitor moni: mat.getMonitores()) {
 					if (moni.getCpf() == monitor.getCpf()) {
-						moni.adicionarAvaliacao(avaliacao);
-						moni.setScore();
-						System.out.println("Score médio do monitor:"+ moni.getScore());
+						monitor.adicionarAvaliacao(avaliacao);
+						monitor.setScore();
+						System.out.println("Score médio do monitor:"+ monitor.getScore());
 					}else {
 						System.out.println("Monitor inexistente");
 					}

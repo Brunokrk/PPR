@@ -25,7 +25,7 @@ public class SistemaMonitoria {
 					if (moni.getCpf() == monitor.getCpf()) {
 						moni.adicionarAvaliacao(avaliacao);
 						moni.setScore();
-						System.out.println("Score médio do monitor:"+ moni.getScore());
+						System.out.println("Score médio do monitor:"+ monitor.getScore());
 					}else {
 						System.out.println("Monitor inexistente");
 					}
